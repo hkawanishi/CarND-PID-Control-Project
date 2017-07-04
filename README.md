@@ -8,6 +8,8 @@ The project was first cloned from Udacity site.  And then PID controller code wa
 build/screen.txt: this text was created by running a command ./pid > screen.txt.  This contains Kp, Ki, Kd (PID controller
 variables) values.
 
+The link to the video: https://youtu.be/IXM_yHECWw0
+
 ## Compilation
 
 Code was complined using cmake and make.
