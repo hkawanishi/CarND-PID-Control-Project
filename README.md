@@ -2,6 +2,52 @@
 Self-Driving Car Engineer Nanodegree Program
 
 ---
+This is a PID controller project for Udacity Self-Driving Car Engineer Nanodegree Porgram.
+The project was first cloned from Udacity site.  And then PID controller code was added by editing in PID.cpp and main.cpp
+
+build/screen.txt: this text was created by running a command ./pid > screen.txt.  This contains Kp, Ki, Kd (PID controller
+variables) values.
+
+## Compilation
+
+Code was complined using cmake and make.
+
+## Implementation
+
+Used the base algorithm which was discussed in the class.
+
+## Reflection
+
+### The effect of each P, I, D components.
+
+"P" value is the proportional component which is a gain.  It observes the vehicle's distance from the center of the lane 
+(cross track error = cte) and if the vehicle is right of the center, it steers to the left.  
+And if the vehicle is left, it steers to the right.  The steering angle is determined by cte and this
+value which is proportional to cte.  Smaller P value will steer slower rate.
+
+"D" valeu is the differential component. This value prevents an overshoot.  This value multiplies the difference of
+cte at each time step, and that means it tries to correct the rate of the change.  
+
+"I" value is the intergration component.  This value adjusts if there is a bias in the CTE.  I don't believe 
+there is much bias with this project as the final value was very small.
+
+### Describe how the final hyperparameters were chosen.
+
+Used "twiddle" method which was discussed in the video lecture. 
+Kp, Ki, Kd values (PID components) are written in screen.txt. 
+It looks like the values are:
+
+Kp = -0.113724 
+Ki = -0.00372379 
+Kd = -0.113724
+
+Unfotunately, I was able to make this work only with a very low speed.
+
+
+-------
+
+
+# Original README entry is below.
 
 ## Dependencies
 
